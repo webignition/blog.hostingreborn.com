@@ -1,0 +1,21 @@
+# Jekyll
+exclude: [nbproject, README.md, manifest.yml, rakefile.rb, _drafts]
+permalink: /:title/
+url: http://blog.hostingreborn.com
+
+# Site
+simplytestable:
+    title: Hosting Reborn Blog
+  
+# Only First P Plugin
+only_first_p:
+    show_read_more_link: false
+    
+# Added for RSS feed
+name: Hosting Reborn Blog
+description: Developing the UK's leading pay-as-you-go web hosting service
+
+# Sitemap plugin
+sitemap:
+  exclude:
+    - "/archive_source/index.html"

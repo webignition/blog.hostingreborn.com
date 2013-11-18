@@ -1,0 +1,194 @@
+---
+layout: default
+title: "Deploying a Static Site With Git and Jekyll to Your cPanel Hosting Account"
+author:
+name: Jon Cram
+url: http://webignition.net
+---
+
+<div class="section section-first">
+    <p>
+        We recently added support for <a href="https://github.com/mojombo/jekyll">Jekyll</a>:
+    </p>
+    <blockquote>
+        Jekyll is a simple, blog aware, static site generator. It takes a template directory (representing the raw form of a website), runs it through Textile or Markdown and Liquid converters, and spits out a complete, static website suitable for serving with Apache or your favorite web server.
+    </blockquote>
+    <p>We've offered <code>git</code> from the command line for a few months.</p>
+    <p>
+        Combining these together gives us a means of easily deploying blog-centric static sites reliably (thanks to git's atomic transfers) and with ease, thanks to all the general benefits of git and the simplicity of Jekyll.
+    </p>
+    <p>
+        I use Hosting Reborn to host a number of personal sites. Today I've been deploying some of these via git and Jekyll.
+    </p>
+    <p>
+        Here's an overview of how to do this with Hosting Reborn within a cPanel environment.
+    </p>
+    <p>
+        Bear in mind that this is a highly technical subject and not something we can offer support for. If you don't know what git is or if you're not familar with command line utilities this probably isn't for you. If you're comfortable, read on.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Step 1: Build your Jekyll-powered site</h3>
+
+    <p>
+        The details of this are entirely up to you - make your site however you like.
+    </p>
+
+    <p>
+        The important part is that you store the code in a publicly-accessible git repository. I'd recommend using <a href="https://github.com">github</a> - you'll be making a public site and so using a free, public repository from github is fine.
+    </p>
+
+    <p>
+        Your repository must be accessible over HTTPS. Both <a href="https://github.com">github</a> and <a href="https://bitbucket.org/">bitbucket</a> are fine in this respect.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Step 2: Create a new hosting account for your new site</h3>
+
+    <p>
+        You've created a new site. Creating a new hosting account to run this site from is a nice way of keeping it cleanly separate from your other sites. It doesn't cost anything to just add a hosting account, so <a href="https://secure.hostingreborn.com/myaccount/">log in</a> and do that.
+    </p>
+
+    <p>
+        I'm assuming you've got a fresh hosting account for your new site. This doesn't need to be the case but the rest of this guide assumes so.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Step 3: Open an SSH connection</h3>
+
+    <p>
+        Everything else from here onwards is carried out via the command line. You really should know how to establish an SSH connection. What follows is a refresher.
+    </p>
+
+    <p>
+        If you're running Windows you'll probably be using <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>. If you're using a Mac or Linux, just open up a new terminal and type in:
+    </p>
+
+    <code>ssh &lt;cpanel-username&gt;@&lt;hosting-account-domain&gt;</code>
+
+    <p>
+        substituting your hosting account's cpanel username and your hosting account's domain name as required.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Step 4: Command line deploy and build</h3>
+
+    <p>
+        There's just a handful of commands you need to issue to retrieve your code with git and build your static content with Jekyll.
+    </p>
+
+    <p>
+        First, let's clone the git repository holding your code.
+    </p>
+
+    <p>
+        We want to the code to be in your hosting account's home directory. Given that you cannot create a git repository in a non-empty directory and given that your hosting account's home directory will start off containing a number of files and directories, we can't clone straight into your hosting account's home directory. We'll move things though a temporary directory to get by this
+    </p>
+
+    <p>
+        From your hosting account's home directory, we're going to create a temporary installation directory, clone your repository into that and then move the contents back into your hosting account's home directory:
+    </p>
+
+    <code><pre>
+mkdir install
+cd install
+git clone https://github.com/example/example.com .
+mv * ..
+mv .git ..
+mv .gitignore ..
+cd ..
+rm install
+        </pre>
+    </code>
+
+    <p>
+        We're now back in your hosting account's home directory and we've copied your cloned git repository to the same location.
+    </p>
+
+    <p>
+        Let's now build the static site from the source using Jekyll:
+    </p>
+
+    <code>
+        jekyll
+    </code>
+
+    <p>
+        That's it. You'll see output similar to:
+    </p>
+
+    <code><pre>
+Configuration from /home/username/_config.yml
+Building site: /home/username -> /home/username/_site
+Successfully generated site: /home/username -> /home/username/_site
+        </pre></code>
+
+    <p>
+        Spot the problem? The default configuration generates the static site content into a directory named <code>_site</code>. You could have changed the default configuration to generate the site in <code>public_html</code>. But you haven't, and you don't strictly need to.
+    </p>
+
+    <p>
+        If your static content is in <code>_site</code>, the next step is for you.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Making <code>public_html</code> point to <code>_site</code></h3>
+
+    <p>
+        We've got a brand new hosting account, haven't we? As such, the pre-supplied <code>public_html</code> directory is empty and isn't needed. We can just remove (or, more safely, rename) this and make a link with the same name point to the <code>_site</code> directory.
+    </p>
+
+    <code><pre>
+mv public_html public_html.bak
+ln -s public_html _site
+        </pre></code>
+
+    <p>
+        There we go, we've made a backup of the pre-existing <code>public_html</code> directory (just in case you find you want it back) and we've created a symlink named <code>public_html</code> that points to the <code>_site</code> directory into which your static site has just been generated.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Updating your site</h3>
+
+    <p>
+        We're now in a position where we have Jekyll on hand to generate your static site content from your source and you have your source in an easily-accessible git repository.
+    </p>
+
+    <p>
+        Assuming you've made changes to your site, updating is really simple:
+    </p>
+
+    <code><pre>
+# Pull changes from your repository
+git pull
+
+# Regenerate your static content
+jekyll
+        </pre></code>
+
+    <p>
+        That's mostly it. You've got an atomically-updateable static site that you can easily update and, through using git, you can version and branch and tag as needed.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Taking further steps</h3>
+
+    <p>
+        Given that Jekyll requires ruby, this means you've got ruby access at the command line, offering the option of further automating your deployment with a rakefile.
+    </p>
+
+    <p>
+        I use a rakefile to pull in change from git and to pull in dependencies such as <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> and <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>..
+    </p>
+
+    <p>
+        This means that I can update a site and it's external dependencies by just issuing a single <code>rake</code> command. And once you've got an automated build and deployment process in place that's just the start.
+    </p>
+</div>

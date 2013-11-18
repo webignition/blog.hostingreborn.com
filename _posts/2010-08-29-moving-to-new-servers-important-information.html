@@ -1,0 +1,63 @@
+---
+layout: default
+title: "Moving to New Servers, Important Information"
+author:
+name: Jon Cram
+url: http://webignition.net
+---
+
+<div class="section section-first">
+    <p>
+        Our new web hosting servers are up and running, which should be an end to our performance issues over the last few months.
+    </p>
+
+    <p>
+        The new servers are in a new data center. Due to this, the transfer of data from the old to the new web hosting servers can't be completely automatic.
+    </p>
+</div>
+
+<div class="section">
+    <p>
+        As a Hosting Reborn customer, there are two things you'll need to do following the transfer of your hosting accounts:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Update web application database settings</strong>
+            <p>
+                Web sites and web applications using databases will need to be pointed at your database on the new server instead of the old server.
+            </p>
+            <p>
+                Change your database host from <strong>localhost</strong> or <strong>78.31.104.54</strong> to <strong>178.63.85.207</strong>.
+            </p>
+            <p>
+                This allows your web sites/applications to operate from both the old and new servers at the same time without any data loss. This is necessary as the relevant DNS changes will not be instant.
+            </p>
+        </li>
+        <li>
+            <strong>Update your domain's DNS settings</strong>
+            <p>If your nameservers are set to ns1.webignition.net and ns2.webignition.net, update these to:
+            </p>
+            <ul>
+                <li>ns1.hostingreborn.com</li>
+                <li>ns2.hostingreborn.com</li>
+                <li>ns3.hostingreborn.com</li>
+                <li>ns4.hostingreborn.com</li>
+            </ul>
+            <p>
+                If you manage your own DNS, change <strong>78.31.104.54</strong> to <strong>178.63.85.207</strong>.
+            </p>
+        </li>
+    </ul>
+
+    <p>
+        Nothing needs to be changed just yet. This is just to let you know what to expect.
+    </p>
+
+    <p>
+        We will contact everyone via email before long to arrange a suitable account transfer time. 
+    </p>
+    <p>
+        In the meantime, please contact <a href="mailto:&#101;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#64;&#104;&#111;&#115;&#116;&#105;&#110;&#103;&#114;&#101;&#98;&#111;&#114;&#110;&#46;&#99;&#111;&#109;">&#101;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#64;&#104;&#111;&#115;&#116;&#105;&#110;&#103;&#114;&#101;&#98;&#111;&#114;&#110;&#46;&#99;&#111;&#109;</a> if there's anything you need to know now.
+    </p>
+</div>

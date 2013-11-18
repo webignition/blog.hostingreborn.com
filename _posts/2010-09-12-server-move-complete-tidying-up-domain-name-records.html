@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Server Move Complete, Tidying Up Domain Name Records"
+author:
+name: Jon Cram
+url: http://webignition.net
+---
+
+<div class="section section-first">
+    <p>
+        The <a href="http://blog.hostingreborn.com/performance-sucks-time-to-upgrade/">server move</a> announced toward the end of last month is now fully complete.
+    </p>
+
+    <p>
+        All hosting accounts have been moved, with email and database requests being transferred on from the old servers to the new servers to avoid anything getting lost.
+    </p>
+
+    <p>
+        We now just need everyone to ensure all domain name records are appropriately updated to prevent websites and email breaking when the old servers are finally decommissioned in about a month from now.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Changing nameserver records</h3>
+
+    <p>
+        If your domain names' nameserver records are set to ns1.webignition.net and ns2.webignition.net these must be changed to:
+    </p>
+
+    <ul>
+        <li>ns1.hostingreborn.com</li>
+        <li>ns2.hostingreborn.com</li>
+        <li>ns3.hostingreborn.com</li>
+        <li>ns4.hostingreborn.com</li>
+    </ul>
+
+    <p>
+        If you manage your own DNS records, you must change occurrences of 78.31.104.54 to 178.63.85.207.
+    </p>
+
+    <p>
+        We'll keep an eye on traffic reaching the old servers and get in touch with anyone who may not have yet made the appropriate changes.
+    </p>    
+</div>

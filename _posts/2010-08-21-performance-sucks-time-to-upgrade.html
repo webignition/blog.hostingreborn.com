@@ -1,0 +1,126 @@
+---
+layout: default
+title: "Performance Sucks, Time to Upgrade"
+author:
+name: Jon Cram
+url: http://webignition.net
+---
+
+<div class="section section-first">
+    <p>
+        The performance of our servers has, since Easter 2010, not been very good.
+    </p>
+
+    <p>
+        It's not been bad, we've not had anyone want to cancel due to the service quality and we're still growing. But not bad doesn't imply good. We want to do better, so we soon will.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Problems we've had this year</h3>
+
+    <p>
+        Our background processes enabling full automation started playing up. These processes run in the background, keeping everything slowly ticking over without getting in the way.
+    </p>
+
+    <p>
+        Except they did get in the way, after having otherwise run flawlessly for about two years. A process here or there would stall because some service it depended on got a bit stuck. A few minutes later another copy of the process would start, not aware of its stalled sibling, and carry on keeping things going.
+    </p>
+
+    <p>
+        Stuck processes would build up, each going nowhere and consuming resources as it went. Eventually every new process would get stuck straight away.
+    </p>
+
+    <p>
+        This vicious circle brought each server to it's knees roughly daily. From flawless operation to daily failure is really not a good situation to be in.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Optimising processes to half fix the problem</h3>
+
+    <p>
+        We re-wrote, tested, re-wrote, tested and re-wrote the automation processes. It was a tedious process of logging timings and resource usage levels, identifying poorly-performing areas of code and re-thinking how to perform operations more efficiently.
+    </p>
+
+    <p>
+        From around the start of June we've not had a single issue with stuck processes bringing a server down. Our service was no longer killing itself.
+    </p>
+
+    <p>
+        We still face issues with occasional excessively high usage levels, where free RAM decreases rapidly and the paging of memory to and from disk causes I/O bottlenecks that only add to the problem. Stuck processes or services can hog the CPU for far too long.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Throwing hardware at the problem</h3>
+
+    <p>
+        There's a limit to how efficient we can make our existing systems run, so we're upgrading all our web hosting servers over the next few weeks.
+    </p>
+
+    <p>
+        Thankfully we've found a way of doing this without increasing operational costs hence without needing to affect your costs.
+    </p>
+
+    <p>
+        Our new web hosting servers feature:
+    </p>
+
+    <ul class="contentList">
+        <li>
+            <strong>Intel Quadcore I7 processors</strong>
+            <p class="first">4 times the number of processing cores. At lot more can happen at once.</p>
+            <p>Stalled processes or services can kill up to 3 of the 4 processing cores before we run into problems.</p>
+        </li>
+        <li>
+            <strong>8GB DDR3 RAM</strong>
+            <p class="first">8 times the amount of RAM.</p>
+            <p>We can handle at least 4 times the current amount of traffic per server before memory becomes a concern again.</p>
+        </li>
+        <li>
+            <strong>100 Mbit throughput</strong>
+            <p class="first">Twice the current data throughput.</p>
+        </li>
+        <li>
+            <strong>100GB additional networked backup space per server</strong>
+            <p class="first">Further flexibility for ensuring data is not lost.</p>
+        </li>
+    </ul>
+</div>
+
+<div class="section">
+    <h3>How we're going to proceed</h3>
+
+    <p>
+        We're setting up a new set of web hosting servers in a new data centre. In essence, we're moving to an entirely new everything.
+    </p>
+
+    <p>
+        Within the next two weeks we'll have all of the Hosting Reborn services moved over. We'll then move each customer bit by bit, taking care to get in touch with everyone in advance and explaining what needs doing and how to minimise downtime and data loss.
+    </p>
+
+    <p>
+        For many people there will be no perceptible downtime or data loss - your website will be running concurrently from both the old and new systems and then eventually from just the new systems.
+    </p>
+
+    <p>
+        For some people there will be downtime and there will be data loss - mostly in the form of intermittent vanishing email for a brief period, some in the form of lost user generated content.
+    </p>
+
+    <p>
+        Some loss of email and user generated content is inevitable. We can't pretend everything will transfer perfectly. But this is something we're going to have to face otherwise in perhaps 6 months or 1 year we won't be here any longer.
+    </p>
+</div>
+
+<div class="section">
+    <h3>And now?</h3>
+
+    <p>
+        We'll be in touch by email over the next two weeks and we'll let you know when your data is to be moved well in advance and what, if anything, you'll need to do.
+    </p>
+
+    <p>
+        In the meantime, please contact <a href="mailto:&#101;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#64;&#104;&#111;&#115;&#116;&#105;&#110;&#103;&#114;&#101;&#98;&#111;&#114;&#110;&#46;&#99;&#111;&#109;">&#101;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#64;&#104;&#111;&#115;&#116;&#105;&#110;&#103;&#114;&#101;&#98;&#111;&#114;&#110;&#46;&#99;&#111;&#109;</a> if there's anything you need to know now.
+    </p>
+</div>
