@@ -4,7 +4,7 @@
         <title>{{ page.title }}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" type="image/png" href="//hostingreborn.com/images/icon.png" />
-        <link href="{{ site.url }}/feed.xml" rel="alternate" type="application/rss+xml" title="Simply Testable Blog Feed" />
+        <link href="{{ site.url }}/feed.xml" rel="alternate" type="application/rss+xml" title="Hosting Reborn Blog Feed" />
         {% include assets/css/default.html %}
         {% include assets/js/default.html %}
         <script>
@@ -29,6 +29,7 @@
         {% include header/navigation.html %}
         
         {% include header/introduction.html %}
+        {% include header/newer-older.html %}
 
         <div class="container">
             <div class="row">
@@ -43,10 +44,8 @@
                     {% endcase %}                                      
                 </div>
                 <div class="col-md-4 sidebar">    
-                    {% include sidebar/newsletter.html %}
-                    {% include sidebar/about.html %}                    
+                    {% include sidebar/twitter-latest.html %}                                                            
                     {% include sidebar/recent.html %}
-                    {% include sidebar/repositories.html %}
                 </div>
             </div>
         </div>

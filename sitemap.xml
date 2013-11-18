@@ -2,107 +2,111 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.hostingreborn.com/where-traditional-shared-hosting-failed/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/we-dont-want-your-money/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/is-hosting-reborn-any-good/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/performance-sucks-time-to-upgrade/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/moving-to-new-servers-important-information/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.hostingreborn.com/server-move-complete-tidying-up-domain-name-records/
         </loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.hostingreborn.com/old-nameservers-are-now-aliases-for-new-nameservers/
         </loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/coming-soon-choose-your-own-password/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/now-live-choose-your-own-password/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.hostingreborn.com/now-live-choose-your-own-hosting-account-password/
         </loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/upgrading-to-php-53/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.hostingreborn.com/deploying-a-static-site-with-git-and-jekyll-to-your-cpanel-hosting-account/
         </loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:15:16+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.hostingreborn.com/security-concerns-initiate-move-to-new-servers/</loc>
+        <lastmod>2013-11-18T13:51:43+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/archive/</loc>
-        <lastmod>2013-11-18T13:07:00+00:00</lastmod>
+        <lastmod>2013-11-18T13:51:13+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/redirect-loops-detected/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/google-analytics-post-launch/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/first-prototype-progress/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/private-alpha/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/test-failures-now-supported/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/architecture-overview/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/first-test-results-json-response/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/test-timeouts-now-supported/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/first-test-results/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/css-validation-options/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/first-prototype-start/</loc>
-        <lastmod>2013-11-18T10:24:55+00:00</lastmod>
+        <lastmod>2013-11-18T13:32:44+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/feed.xml</loc>
@@ -110,6 +114,6 @@
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/</loc>
-        <lastmod>2013-11-18T13:03:23+00:00</lastmod>
+        <lastmod>2013-11-18T13:51:43+00:00</lastmod>
     </url>
 </urlset>
