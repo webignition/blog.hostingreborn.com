@@ -1,0 +1,170 @@
+---
+layout: default
+title: "How To Receive All Your Email During The Server Move"
+author:
+name: Jon Cram
+url: http://webignition.net
+---
+
+<div class="section section-first">
+    
+    <p>
+        I mentioned recently our <a href="/security-concerns-initiate-move-to-new-servers/">plans to move to new hosting servers</a>.
+    </p>
+    
+    <p>
+        I stated in a related email announcement that no mail  will be lost as mail ending up at one of the old servers will be
+        routed automatically to the relevant new server. This is still true and
+        your email will not get lost.
+    </p>    
+    
+    <p>
+        Whilst no email will be lost (I've spent the last two days testing
+        out various scenarios), you might think some email as gone astray
+        as you may be looking in the wrong place for your email when you
+        think you're looking in the right place.
+    </p>
+    
+    <p>
+        Here's how you can ensure no interruptions occur to your email service during 
+        the move.
+    </p>
+</div>
+
+<div class="section">
+    <h3>Check Your Mail Account Settings Now</h3>
+    
+    <p>
+        If you use Hosting Reborn for your email, both your incoming and 
+        outgoing mail servers should be set to either your domain or your mail subdomain.
+    </p>    
+    
+    <p>
+        For me, that would be either hostingreborn.com or mail.hostingreborn.com.
+        For you, replace hostingreborn.com with the domain name in your email address.
+    </p>
+    
+    <p>
+        If you are using any other server name for your incoming or outgoing
+        mail server, it is working but conincidence not by design. Unless, of
+        course, you're intentionally using another mail service and know
+        what you're doing.
+    </p>
+    
+    <p>
+        Check your mail client's server settings now. If either the incoming
+        or outgoing mail server address is anything other than the domain
+        name in your email address (optionally preceded by <em>mail.</em>) and you're
+        not using a third-party mail service, change your settings now.
+    </p>
+        
+    <p>
+        Please <a href="http://secure.hostingreborn.com/contact/">contact us</a>
+        if you're in doubt.
+    </p>        
+</div>
+
+<div class="section">
+    <h3>Updating Your Mail Server Settings Immediately After The Move</h3>
+    
+    <p>
+        After your own hosting accounts have been moved I will send you an email
+        directly detailing what you need to do or look out for.
+    </p>
+    
+    <p>
+        You may not get that email straight away if you're looking in the wrong
+        place for email when you think you're looking in the right place.
+    </p>
+    
+    <p>
+        Here's what you need to look out for when it comes to email to be sure
+        that you get the email that we send you.
+    </p>
+    
+    <p>
+        At present, the global DNS system tells your computer to look on the
+        current (soon to be old) Hosting Reborn servers when you want to 
+        receive new messages.
+    </p>
+    
+    <p>
+        Immediately after the move, the global DNS system will know no different.
+        Although we will update your DNS records to indicate that your email
+        now lives on the new Hosting Reborn servers, it will take some time
+        for every Internet service to notice the change.
+    </p>
+    
+    <p>
+        This is how you may end up looking in the wrong place for your email
+        when you think you're looking in the right place.
+    </p>
+    
+    <p>
+        Eventually things will sort themselves out and after a few hours or 
+        perhaps a day (it really depends on your Internet provider) but during this
+        time you may not be receiving any new emails as all new emails will be
+        patiently waiting on the new servers whilst you're looking on the old
+        servers.
+    </p>
+    
+    <p>
+        If you think you're not receiving new messages immediately after the
+        move, you may need to tell your email client to look directly on the
+        new Hosting Reborn servers (instead of letting the global DNS system
+        figure this out for you).
+    </p>
+    
+    <p>
+        In this respect you've got two options. The first is for advanced
+        users, the second is for everyone else:
+    </p>
+    
+    <ol>
+        <li>
+            <p>
+                Set up a local hosts file entry mapping your incoming
+                mail server hostname to 144.76.222.164. I am intentionally
+                not going to explain that. If that makes no sense it is not
+                the option for you.
+            </p>
+        </li>
+        <li>
+            <p>
+                Make a note of your current incoming mail server address
+                and change it to 144.76.222.164. A couple of days later
+                you can change it back to what it was. This is likely your
+                best option.
+            </p>
+        </li>
+    </ol>    
+    
+    <p>
+        There is actually a third option: do nothing. Things will sort
+        themselves out eventually. Your email will not be lost, just waiting.
+    </p>    
+</div>  
+
+<div class="section">
+    <h3>Getting In Touch If You Have Concerns</h3>
+    
+    <p>
+        Please <a href="http://secure.hostingreborn.com/contact/">contact us</a>
+        if you have any concerns about your email immediately after your 
+        hosting accounts have been moved.
+    </p>        
+    
+    <p>
+        If you need to do so, make sure to remember something very important:
+        if you are having problems receiving email and you get in touch
+        using the very same email address, you may not receive our replies.
+    </p>
+    
+    <p>
+        If you do need to get in touch about your email after your hosting
+        accounts have been moved, please use an email address not hosted by us
+        so that we can be sure you will receive our replies. You can easily
+        <a href="//gmail.com/">get a free GMail address</a> which would be fine.
+    </p>
+    
+</div>
