@@ -64,11 +64,17 @@
         <loc>
             http://blog.hostingreborn.com/how-to-receive-all-your-email-during-the-server-move/
         </loc>
-        <lastmod>2013-11-21T16:06:02+00:00</lastmod>
+        <lastmod>2013-11-21T16:07:07+00:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://blog.hostingreborn.com/dealing-with-database-driven-sites-and-user-generated-content-during-the-server-move/
+        </loc>
+        <lastmod>2013-11-25T10:31:27+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/archive/</loc>
-        <lastmod>2013-11-21T16:05:11+00:00</lastmod>
+        <lastmod>2013-11-25T10:24:32+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/illustrations/redirect-loops-detected/</loc>
@@ -120,6 +126,6 @@
     </url>
     <url>
         <loc>http://blog.hostingreborn.com/</loc>
-        <lastmod>2013-11-21T16:06:02+00:00</lastmod>
+        <lastmod>2013-11-25T10:31:27+00:00</lastmod>
     </url>
 </urlset>

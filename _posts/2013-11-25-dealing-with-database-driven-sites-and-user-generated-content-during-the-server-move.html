@@ -1,0 +1,161 @@
+---
+layout: default
+title: "Dealing With Database-Driven Sites and User Generated Content During The Server Move"
+author:
+name: Jon Cram
+url: http://webignition.net
+---
+
+<div class="section section-first">
+    
+    <p>
+        I mentioned recently our <a href="/security-concerns-initiate-move-to-new-servers/">plans to move to new hosting servers</a>
+        and followed this up with a guide to <a href="/how-to-receive-all-your-email-during-the-server-move/">receiving all your email during the move</a>.
+    </p>
+    
+    <p>
+        We're now moving hosting accounts to the new hosting servers and in relation
+        to this I'd like to outline how you can deal with database-driven sites
+        and user generated content during the move.
+    </p>    
+</div>
+
+
+<!-- http://docs.cpanel.net/twiki/bin/view/AllDocumentation/WHMDocs/MySQLHosts  -->
+
+<div class="section">
+    <h3>Problem Overview</h3>
+    
+    <p>
+        Hosting accounts are moving from 178.63.85.207 to 144.76.222.164.
+    </p>
+    
+    <p>
+        It will take some time for all computers around the world to be aware of this change, sometimes up to 24 hours. This
+        is not something we can control.
+    </p>
+    
+    <p>
+        For a day or so after the move, visitors to your websites may end up reaching either the old hosting server or the 
+        new hosting server.
+    </p>
+    
+    <p>
+        If you deal with frequent user generated content, such as discussion forums or blog comments, you may find
+        content to be inconsistent. If user A reaches the old hosting servers and makes a blog comment and user B
+        reaches the new hosting servers and makes a blog comment, each comment will be stored in a different place,
+        neither will be visible to all users and over time the comment from user A will be lost.
+    </p>      
+</div>
+
+<div class="section">
+    <h3>Ensuring All Of Your Content Ends Up In The Same Database</h3>
+    
+    <p>
+        For a couple of days after your hosting accounts have been moved, we
+        cannot control whether it is the old hosting servers or the new hosting
+        servers that are reached by visitors to your websites.
+    </p>
+    
+    <p>
+        It is possible, however, to control into which database such user generated content
+        is stored.
+    </p>
+    
+    <p>
+        You can change the database configuration for your websites on the old
+        hosting servers so as to use the correct database on the new hosting servers.
+    </p>
+    
+    <p>
+        How you do this depends entirely on the web applications you are running.
+        We can't tell you where to make this change, but we can tell you what to change
+        and how you can go about doing that.
+    </p> 
+</div>
+
+<div class="section">
+    <h3>Applying Database Configuration Changes On The Old Hosting Servers</h3>
+    
+    <p>
+        Note: this only applies after your hosting accounts have been moved. We will
+        send you an email directly once your hosting accounts have been moved.
+    </p>
+    
+    <p>
+        To apply database configuration changes for a given hosting account:
+    </p>
+    
+    <ol>
+        <li>
+            <p>
+                Establish a FTP connection to 178.63.85.207, using the relevant
+                hosting account username and password.
+            </p>
+        </li>        
+        <li>
+            <p>
+                Navigate to your database configuration settings file. What this
+                is called and where is located depends entirely on the web application
+                you are running. If you're not sure, Google is your friend.
+            </p>
+        </li>
+        <li>
+            <p>
+                Change the database host from the current setting (most likely 'localhost')
+                to 144.76.222.164.
+            </p>
+        </li>
+        <li>
+            <p>
+                Save and upload your changes.
+            </p>
+        </li>
+    </ol>        
+</div>
+
+<div class="section">
+    <h3>Verifying That Remote MySQL Connections Are Allowed</h3>
+    
+    <p>
+        The above changes will ensure that your web applications running on the old
+        hosting servers will use the relevant database on the new hosting servers.
+    </p>
+    
+    <p>
+        We have configured the MySQL server on the new hosting servers to allow
+        remote connections from the old hosting servers.
+    </p> 
+    
+    <p>
+        This may not work as expected if you have ever set up additional MySQL
+        access hosts.
+    </p>
+    
+    <p>
+        To verify your current MySQL access hosts settings:
+    </p>
+    
+    <ol>
+        <li>
+            <p>
+                Log in to cPanel on the new hosting servers. The cPanel address
+                will have changed. Log in to your Hosting Reborn account to
+                determine the correct cPanel address.
+            </p>
+        </li>
+        <li>
+            <p>
+                Navigate to the additional MySQL access hosts section. Refer
+                to the <a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/WHMDocs/MySQLHosts">relevant cPanel documentation</a> if you are not sure where this
+                is and what it does.
+            </p>
+        </li>
+        <li>
+            <p>
+                Check that 178.63.85.207 is listed as an allowed host. Add this
+                if missing.
+            </p>
+        </li>
+    </ol>
+</div>
