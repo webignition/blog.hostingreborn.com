@@ -16,6 +16,6 @@ name: Hosting Reborn Blog
 description: Developing the UK's leading pay-as-you-go web hosting service
 
 # Sitemap plugin
-sitemap:
-  exclude:
-    - "/archive_source/index.html"
+#sitemap:
+#  exclude:
+#    - "/archive_source/index.html"
